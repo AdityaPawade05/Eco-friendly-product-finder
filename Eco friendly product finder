@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco-Friendly Product Finder</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body and Font Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    /* Header Styling */
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
+    /* Search Section */
+    #search {
+      background-color: #fff;
+      padding: 20px 0;
+    }
+
+    #search .container {
+      text-align: center;
+    }
+
+    #search input {
+      width: 50%;
+      padding: 10px;
+      margin-right: 10px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #search button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Categories Section */
+    #categories {
+      padding: 30px 0;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    #categories ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    #categories li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    #categories a {
+      text-decoration: none;
+      color: #4CAF50;
+      font-size: 1.2em;
+    }
+
+    #categories a:hover {
+      text-decoration: underline;
+    }
+
+    /* Filters Section */
+    #filters {
+      padding: 30px 0;
+      background-color: #fff;
+    }
+
+    #filters form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #filters label {
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    #filters select {
+      padding: 10px;
+      margin-right: 15px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #filters button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Product Grid Section */
+    #products {
+      padding: 50px 0;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .product-item {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .product-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .product-item h3 {
+      font-size: 1.5em;
+      margin: 10px 0;
+    }
+
+    .product-item p {
+      font-size: 1em;
+      color: #666;
+    }
+
+    .product-item .price {
+      font-size: 1.2em;
+      color: #4CAF50;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    /* Footer Section */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1>Eco-Friendly Product Finder</h1>
+      <p>Find Sustainable Products to Make a Positive Impact</p>
+    </div>
+  </header>
+
+  <!-- Search Section -->
+  <section id="search">
+    <div class="container">
+      <input type="text" placeholder="Search eco-friendly products..." id="search-bar">
+      <button type="button">Search</button>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section id="categories">
+    <div class="container">
+      <h2>Product Categories</h2>
+      <ul>
+        <li><a href="#">Home Goods</a></li>
+        <li><a href="#">Personal Care</a></li>
+        <li><a href="#">Fashion</a></li>
+        <li><a href="#">Tech & Gadgets</a></li>
+        <li><a href="#">Food & Drink</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Filter Section -->
+  <section id="filters">
+    <div class="container">
+      <h2>Filter By</h2>
+      <form>
+        <label for="material">Material:</label>
+        <select id="material">
+          <option value="bamboo">Bamboo</option>
+          <option value="recycled">Recycled Materials</option>
+          <option value="organic">Organic Cotton</option>
+        </select>
+
+        <label for="certification">Certification:</label>
+        <select id="certification">
+          <option value="fair-trade">Fair Trade</option>
+          <option value="organic">Organic</option>
+          <option value="b-corp">B Corp</option>
+        </select>
+
+        <button type="submit">Apply Filters</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Product Grid Section -->
+  <section id="products">
+    <div class="container">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        <!-- Example Product 1 -->
+        <div class="product-item">
+          <img src="images/product1.jpg" alt="Eco-Friendly Product 1">
+          <h3>Reusable Bamboo Straws</h3>
+          <p>Set of 5 eco-friendly bamboo straws. Perfect for your sustainable kitchen.</p>
+          <p class="price">$9.99</p>
+        </div>
+
+        <!-- Example Product 2 -->
+        <div class="product-item">
+          <img src="images/product2.jpg" alt="Eco-Friendly Product 2">
+          <h3>Organic Cotton T-Shirt</h3>
+          <p>Soft and breathable organic cotton T-shirt. Eco-friendly fashion at its best.</p>
+          <p class="price">$19.99</p>
+        </div>
+
+        <!-- Example Product 3 -->
+        <div class="product-item">
+          <img src="images/product3.jpg" alt="Eco-Friendly Product 3">
+          <h3>Solar Powered Charger</h3>
+          <p>Portable solar charger, perfect for outdoor adventures and eco-conscious travelers.</p>
+          <p class="price">$29.99</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Eco-Friendly Product Finder. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
